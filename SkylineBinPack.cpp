@@ -153,7 +153,7 @@ bool SkylineBinPack::RectangleFits(int skylineNodeIndex, int width, int height, 
 	y = skyLine[skylineNodeIndex].y;
 	while(widthLeft > 0)
 	{
-		y = max(y, skyLine[i].y);
+		y = std::max(y, skyLine[i].y);
 		if (y + height > binHeight)
 			return false;
 		widthLeft -= skyLine[i].width;
